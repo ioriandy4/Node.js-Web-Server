@@ -8,9 +8,9 @@ if (dev === 'dev') {
     MYSQL_CONF = {
         host: 'localhost',
         user: 'root',
-        password: '123456',
+        password: 'qqa5458472',
         port: '3306',
-        database: 'mybog'
+        database: 'nodeblog'
     }
 
     REDIS_CONF = {
@@ -23,9 +23,9 @@ if (dev === 'production') {
     MYSQL_CONF = {
         host: 'localhost',
         user: 'root',
-        password: '123456',
+        password: 'qqa5458472',
         port: '3306',
-        database: 'mybog'
+        database: 'nodeblog'
     }
 
     REDIS_CONF = {

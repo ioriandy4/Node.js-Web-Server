@@ -10,9 +10,9 @@ function md5(content) {
     return md5.update(content).digest('hex')
 }
 
-function genPassword(password) {
+function genPassword() {
+    let password = 'user1';
     let str = `password=${password};<>${SECRET_KEY}`
-
     return md5(str)
 }
 

@@ -35,8 +35,6 @@
     <div id="blog-container"></div>
 
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-    <script src="https://cdn.bootcss.com/moment.js/2.23.0/locale/zh-cn.js"></script>
     <script>
         // 发送 get 请求
         function get(url) {
@@ -44,8 +42,25 @@
         }
 
         // 显示格式化的时间
-        function getFormatDate(dt) {
-            return moment(dt).format('LL')
+        function getFormatDate(timestamp) {
+            if (timestamp) {
+                timestamp = Number(timestamp);
+                var date = new Date(timestamp);
+                var y = date.getFullYear();
+                var m = date.getMonth() + 1;
+                m = m < 10 ? ('0' + m) : m;
+                var d = date.getDate();
+                d = d < 10 ? ('0' + d) : d;
+                var h = date.getHours();
+                h = h < 10 ? ('0' + h) : h;
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                minute = minute < 10 ? ('0' + minute) : minute;
+                second = second < 10 ? ('0' + second) : second;
+                return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;
+            } else {
+                return '';
+            }
         }
 
         // 获取 url 参数

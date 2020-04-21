@@ -86,6 +86,7 @@ const app = (req, res) => {
     // }
 
     // req.session = SESSION_DATA[userId]
+    // 以一个长串的值，作为key，然后各种用户信息用json包装，作为value存着
     let userId = req.cookie.userid
     let needSetCookie = false
     if (!userId) {

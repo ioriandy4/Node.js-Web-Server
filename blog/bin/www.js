@@ -4,5 +4,6 @@ const app = require('../app.js')
 
 const server = http.createServer(app)
 
-server.listen(8000)
-console.log('OK')
+server.listen(8000, () => {
+    console.log(`listen 8000 ok`);
+});
