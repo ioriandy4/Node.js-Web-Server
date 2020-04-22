@@ -1,7 +1,0 @@
-在当前目录npm install
-然后安装 nginx redis mysql
-mysql表如下
-blogs表
-id content createtime author title
-users表
-id username password realname

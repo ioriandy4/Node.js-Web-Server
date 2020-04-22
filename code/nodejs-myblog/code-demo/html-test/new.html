@@ -23,14 +23,19 @@
             width: 300px;
             height: 150px;
         }
+        input, textarea{
+            border: 1px solid #000;
+        }
     </style>
 </head>
 <body>
     <h1 style="border-bottom: 1px solid #ccc; padding-bottom: 10px;">创建博客</h1>
     <div>
+        <p>标题</p>
         <div class="title-wrapper">
             <input id="text-title">
         </div>
+        <p>内容</p>
         <div class="content-wrapper">
             <textarea id="text-content"></textarea>
         </div>
@@ -39,7 +44,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
     <script>
         // 发送 post 请求
         function post(url, data = {}) {
